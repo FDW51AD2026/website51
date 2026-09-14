@@ -1,0 +1,32 @@
+html{
+    background-color: rgb(214, 210, 201);
+}
+article {
+    padding: 1px;
+    border: 2px solid rgba(119, 30, 179, 0.993);
+}
+
+h1 {
+    text-align: center;
+    color: rgba(119, 30, 179, 0.993);
+}
+
+h2 {
+    text-align: center;
+    color: rgba(138, 69, 184, 0.993);
+}
+
+#usuario {
+    text-align: center;
+    
+}
+
+
+/* */
+#evidencia {
+    border: 2px solid rgba(119, 30, 179, 0.993);
+    text-align: center;
+}
+#evidencia:hover {
+    background-color: rgba(200, 171, 219, 0.993);
+}

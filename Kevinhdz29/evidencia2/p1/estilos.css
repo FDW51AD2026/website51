@@ -1,0 +1,40 @@
+form {
+    border: 5px solid black;
+    width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: bisque;
+    margin: 0 auto;
+}
+
+h1 {
+    border: 5px solid black;
+    box-sizing: border-box;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    border: 5px solid brown;
+}
+
+html {
+    background-color: navajowhite;
+}
+
+img{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+hr {
+    color: blue;
+}
+
+a {
+    color:bisque;
+}

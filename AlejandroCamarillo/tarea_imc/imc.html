@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+    <style>
+        .cuadro { width: 320px; margin: 40px auto; padding: 20px; border: 2px solid blue; }
+    </style>
+</head>
+<body><div class="cuadro">
+    <form>
+        <label for="peso">Peso</label>
+        <input type="text" id="peso"><br><br>
+
+        <label for="altura">Altura</label>
+        <input type="text" id="altura"><br><br>
+
+        <label for="imc">IMC</label>
+        <input type="text" id="imc" readonly><br><br>
+
+        <label for="resultado">Resultado</label>
+        <input type="text" id="resultado" readonly><br><br>
+
+        <button id="btnCalcular">Calcular</button>
+    </form>
+</div>
+
+<script src="imc.js"></script>
+</body>
+</html>

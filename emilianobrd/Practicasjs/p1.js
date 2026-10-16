@@ -7,7 +7,7 @@ const buttonCalcular = document.getElementById("btnCalcular");
 buttonCalcular.addEventListener("click", e => {
     e.preventDefault();
 
-    let peso = parseInt(inputPeso.value);
+    let peso = parseFloat(inputPeso.value);
     let altura = parseFloat(inputAltura.value); 
 
     let imc = (peso / (altura ** 2)).toFixed(2);

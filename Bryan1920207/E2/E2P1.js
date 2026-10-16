@@ -1,7 +1,7 @@
 const inputPeso = document.getElementById("Peso");
 const inputAltura = document.getElementById("Altura");
 const outputIMC = document.getElementById("IMC");
-const outputResultado = document.getElementById("Resul");
+const outputResul = document.getElementById("Resul");
 const buttonCalcular = document.getElementById("btnCalcular");
 
 buttonCalcular.addEventListener("click", e => {
@@ -12,12 +12,13 @@ buttonCalcular.addEventListener("click", e => {
     let IMC = Peso/Altura;
 
     if(IMC > 18.5 && IMC<25){
-        Resultado = "Peso normal"
+        Resul = "Peso normal"
     }
     else if(IMC < 18.5){
-        Resultado = "Bajo peso"
+        Resul = "Bajo peso"
     }
     else{
-        Resultado = "Sin clasificacion"
+        Resul = "Sin clasificacion"
     }
+    outputResul.value=Resul;
 })

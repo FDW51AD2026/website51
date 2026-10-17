@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,17 @@
     <h1>peso de la persona</h1>
     <form action="">
         <label for="peso">peso</label>
-        <input type="text" name="peso" id="peso"><br>
+        <input type="text" id="peso"><br>
 
         <label for="altura">altura</label>
-        <input type="text" name="altura" id="altura"><br>
+        <input type="text" id="altura"><br>
 
         <label for="imc">imc</label>
-        <input type="text" name="imc" id="imc"><br>
+        <input type="text" id="imc"><br>
 
-        <label for="resultado">imc:</label>
-        <input type="text" name="resultado" id="resultado"><br>
+        <label for="resultado">resultado</label>
+        <input type="text" id="resultado"><br>
 
         <button id="button">total</button>
-
+        <script src="datos1.js"></script>
     </form>
-
-    

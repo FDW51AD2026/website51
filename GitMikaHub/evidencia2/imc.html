@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+    <style>
+        .box {
+            border: 1px solid #7a7a7a;
+            padding: 12px;
+            width: 220px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .row label {
+            font-weight: bold;
+        }
+        .row input {
+            width: 120px;
+            padding: 2px;
+        }
+        button {
+            margin-top: 8px;
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="row">
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" step="any">
+        </div>
+        <div class="row">
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" step="any">
+        </div>
+        <div class="row">
+            <label for="imc">IMC:</label>
+            <input type="text" id="imc" readonly>
+        </div>
+        <div class="row">
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" readonly>
+        </div>
+        <button onclick="calcularIMC()">Calcular</button>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            const inputIMC = document.getElementById('imc');
+            const inputResultado = document.getElementById('resultado');
+
+            if (isNaN(peso) || isNaN(altura) || altura <= 0) {
+                inputIMC.value = "";
+                inputResultado.value = "Sin clasificación";
+                return;
+            }
+
+            const imc = peso / (altura * altura);
+            inputIMC.value = imc.toFixed(2);
+
+            if (imc < 18.5) {
+                inputResultado.value = "Bajo Peso";
+            } else if (imc >= 18.5 && imc <= 25) {
+                inputResultado.value = "Peso Normal";
+            } else {
+                inputResultado.value = "Sin clasificación";
+            }
+        }
+    </script>
+
+</body>
+</html>

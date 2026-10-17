@@ -9,17 +9,17 @@
     
     <h1>peso de la persona</h1>
     <form action="">
-        <label for="peso">Peso</label>
-        <input type="text" id="peso"><br>
+        <label for="Peso">Peso</label>
+        <input type="text" id="Peso"><br>
 
-        <label for="altura">Altura</label>
-        <input type="text" id="altura"><br>
+        <label for="Altura">Altura</label>
+        <input type="text" id="Altura"><br>
 
-        <label for="imc">Imc</label>
-        <input type="text" id="imc"><br>
+        <label for="Imc">Imc</label>
+        <input type="text" id="Imc"><br>
 
-        <label for="resultado">Resultado</label>
-        <input type="text" id="resultado"><br>
+        <label for="Resultado">Resultado</label>
+        <input type="text" id="Resultado"><br>
 
         <button id="button">Total</button><br>
         <script src="datos1.js"></script>

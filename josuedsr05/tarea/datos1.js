@@ -2,7 +2,7 @@ const inputPeso = document.getElementById("peso");
 const inputAltura = document.getElementById("altura");
 const outputImc = document.getElementById("imc");
 const outputResultado = document.getElementById("resultado");
-const buttonCalcular = document.getElementById("btnCalcular");
+const button = document.getElementById("calcular");
 
 buttonCalcular.addEventListener("click", e => {
     e.preventDefault();

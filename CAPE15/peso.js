@@ -5,11 +5,11 @@ const outputResultado = document.getElementById("resultado");
 const buttonCalcular = document.getElementById("calcular");
 
 buttonCalcular.addEventListener("click", () => {
-  // 1. Leer los valores
+  
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
 
-  // 2. Validar que sean datos correctos
+  
   if (peso <= 0 || altura <= 0) {
     outputImc.value = "";
     outputResultado.value = "Ingresa valores válidos";

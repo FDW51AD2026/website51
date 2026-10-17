@@ -6,20 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
     <h1>peso de la persona</h1>
     <form action="">
-        <label for="peso">peso</label>
+        <label for="peso">Peso</label>
         <input type="text" id="peso"><br>
 
-        <label for="altura">altura</label>
+        <label for="altura">Altura</label>
         <input type="text" id="altura"><br>
 
-        <label for="imc">imc</label>
+        <label for="imc">Imc</label>
         <input type="text" id="imc"><br>
 
-        <label for="resultado">resultado</label>
+        <label for="resultado">Resultado</label>
         <input type="text" id="resultado"><br>
 
-        <button id="button">total</button>
+        <button id="button">Total</button>
         <script src="datos1.js"></script>
+    </div>
     </form>

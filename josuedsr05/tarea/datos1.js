@@ -4,7 +4,7 @@ const outputImc = document.getElementById("imc");
 const outputResultado = document.getElementById("resultado");
 const button = document.getElementById("calcular");
 
-buttonCalcular.addEventListener("click", e => {
+button.addEventListener("click", e => {
     e.preventDefault();
 
     let peso = parseFloat(inputPeso.value);

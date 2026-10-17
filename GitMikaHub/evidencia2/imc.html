@@ -70,9 +70,17 @@
             inputIMC.value = imc.toFixed(2);
 
             if (imc < 18.5) {
-                inputResultado.value = "Bajo Peso";
-            } else if (imc >= 18.5 && imc <= 25) {
-                inputResultado.value = "Peso Normal";
+                inputResultado.value = "PESO BAJO";
+            } else if (imc >= 18.5 && imc < 25) {
+                inputResultado.value = "PESO NORMAL";
+            } else if (imc >= 25 && imc < 30) {
+                inputResultado.value = "SOBREPESO";
+            } else if (imc >= 30 && imc < 35) {
+                inputResultado.value = "OBESIDAD LEVE";
+            } else if (imc >= 35 && imc < 40) {
+                inputResultado.value = "OBESIDAD MEDIA";
+            } else if (imc >= 40) {
+                inputResultado.value = "OBESIDAD MÓRBIDA";
             } else {
                 inputResultado.value = "Sin clasificación";
             }

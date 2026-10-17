@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    
     <h1>peso de la persona</h1>
     <form action="">
         <label for="peso">Peso</label>
@@ -21,7 +21,11 @@
         <label for="resultado">Resultado</label>
         <input type="text" id="resultado"><br>
 
-        <button id="button">Total</button>
+        <button id="button">Total</button><br>
         <script src="datos1.js"></script>
-    </div>
+
+        <a href="https://github.com/FDW51AD2026/website51/commits/main/?author=josuedsr05">commits</a>
+        
+    
+        
     </form>

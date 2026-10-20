@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="color: blue;">Hacer figuras</h1>
+    <form action="">
+        <label for="figura">figura</label>
+        <input type="" id="figura"><br>
+
+        <label for="caracter">caracter</label>
+        <input type="" id="caracter"><br>
+
+        <label for="altura">altura</label>
+        <input type="text" id="altura"><br>
+
+        <button id="button">mostrar</button><br>
+        <script src="practiica 2 .js"></script>

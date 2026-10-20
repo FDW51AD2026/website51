@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo del IMC</title>
+  <style>
+    .caja {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+    .caja p { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <p>Peso (kg): <input type="text" id="peso"></p>
+    <p>Altura (m): <input type="text" id="altura"></p>
+    <p>IMC: <input type="text" id="imc" readonly></p>
+    <p>Resultado: <input type="text" id="resultado" readonly></p>
+    <p><button type="button" onclick="calcular()">Calcular</button></p>
+  </div>
+    <script>
+    function calcular() {
+      var peso = parseFloat(document.getElementById("peso").value);
+      var altura = parseFloat(document.getElementById("altura").value);
+            if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        document.getElementById("imc").value = "";
+        document.getElementById("resultado").value = "Datos inválidos";
+        return;
+      }
+      var imc = peso / (altura * altura);
+      var texto;
+
+      if (imc < 18.5) {
+        texto = "Bajo Peso";
+      } else if (imc <= 25) {
+        texto = "Peso Normal";
+      } else {
+        texto = "Sin clasificación";
+      }
+
+      document.getElementById("imc").value = imc.toFixed(2);
+      document.getElementById("resultado").value = texto;
+    }
+  </script>
+</body>
+</html>

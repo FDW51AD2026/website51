@@ -21,5 +21,6 @@ buttonCalcular.addEventListener("click", e => {
     else{
         Resul = "Sin clasificacion"
     }
+    outputIMC.value=IMC;
     outputResul.value=Resul;
 })

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidencia 2 - Práctica 1</title>
+  <style>
+    .formulario {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .formulario p { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Evidencia 2</h1>
+  <h2>Práctica 1</h2>
+  <p>Crear una aplicación para el cálculo del Índice de Masa Corporal (IMC).</p>
+
+  <div class="formulario">
+    <p>Peso (kg): <input type="number" id="peso" step="any"></p>
+    <p>Altura (m): <input type="number" id="altura" step="any"></p>
+    <p>IMC: <input type="text" id="imc" readonly></p>
+    <p>Resultado: <input type="text" id="resultado" readonly></p>
+    <button type="button" onclick="calcular()">Calcular</button>
+  </div>
+
+  <script>
+    function calcular() {
+      const peso = parseFloat(document.getElementById("peso").value);
+      const altura = parseFloat(document.getElementById("altura").value);
+
+      if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        alert("Ingresa un peso y una altura válidos.");
+        return;
+      }
+
+      const imc = peso / (altura * altura);
+      let resultado;
+
+      if (imc < 18.5) {
+        resultado = "Bajo Peso";
+      } else if (imc >= 18.5 && imc <= 25) {
+        resultado = "Peso Normal";
+      } else {
+        resultado = "Sin clasificación";
+      }
+
+      document.getElementById("imc").value = imc.toFixed(2);
+      document.getElementById("resultado").value = resultado;
+    }
+  </script>
+</body>
+</html>

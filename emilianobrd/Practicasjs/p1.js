@@ -10,14 +10,14 @@ buttonCalcular.addEventListener("click", e => {
     let peso = parseFloat(inputPeso.value);
     let altura = parseFloat(inputAltura.value); 
 
-    let imc = (peso / (altura ** 2)).toFixed(2);
-    outputImc.value = imc;
+    let imc = peso / (altura ** 2);
+    outputImc.value = imc.toFixed(2);
 
     if(imc < 18.5) {
-        outputResul.value = (`Bajo peso ${imc}`);
+        outputResul.value = ("Bajo Peso");
     }
     else if(imc <= 25 ) {
-        outputResul.value = (`Peso normal ${imc}`);
+        outputResul.value = ("Peso Normal");
     }
     else 
         outputResul.value = ("Sin clasificacion");

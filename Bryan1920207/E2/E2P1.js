@@ -1,11 +1,12 @@
 const inputPeso = document.getElementById("Peso");
 const inputAltura = document.getElementById("Altura");
-const outputIMC = document.getElementById("IMC");
+const inputIMC = document.getElementById("IMC");
 const outputResul = document.getElementById("Resul");
 const buttonCalcular = document.getElementById("btnCalcular");
 
 buttonCalcular.addEventListener("click", e => {
     e.preventDefault();
+    console.log("Se dio click al boton");
 
     let Peso = parseInt(inputPeso.value);
     let Altura = parseFloat(inputAltura.value);

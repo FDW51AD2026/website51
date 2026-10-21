@@ -7,11 +7,11 @@
 </head>
 <body>
     <form>
-        <label style="color: darkgreen;" >Hacer figuras</label>
+    <label style="color: darkgreen;" >Hacer figuras</label>
         <select id="Figura">
             <option style="color: blueviolet;">Triangulo</option>
             <option style="color: blueviolet;">Rectangulo</option>
-            </select><br>
+        </select><br>
 
         <label style="color: chartreuse;" >Caracter</label>
         <input id="Caracter" type="Text"><br>
@@ -22,7 +22,7 @@
         <button id="btnMostrar" style="color: red;">Mostrar</button><br>
         <script src="practiica 2 .js" style="color: deeppink;"></script>
 
-    </form>
+   </form>
 
 </body>
 </html>

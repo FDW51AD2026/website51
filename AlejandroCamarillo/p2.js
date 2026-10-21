@@ -1,7 +1,6 @@
-// Práctica 2 - Figuras
 function cambiarFigura() {
-  var figura = document.getElementById("figura").value;
-  var divBase = document.getElementById("divBase");
+  const figura = document.getElementById("figura").value;
+  const divBase = document.getElementById("divBase");
 
   if (figura === "rectangulo") {
     divBase.style.display = "block";
@@ -12,12 +11,12 @@ function cambiarFigura() {
 }
 
 function mostrar() {
-  var figura = document.getElementById("figura").value;
-  var caracter = document.getElementById("caracter").value;
-  var altura = parseInt(document.getElementById("altura").value);
-  var base = parseInt(document.getElementById("base").value);
-  var resultado = document.getElementById("resultado");
-  var texto = "";
+  const figura = document.getElementById("figura").value;
+  const caracter = document.getElementById("caracter").value;
+  const altura = parseInt(document.getElementById("altura").value);
+  const base = parseInt(document.getElementById("base").value);
+  const resultado = document.getElementById("resultado");
+  let texto = "";
 
   if (caracter === "" || isNaN(altura) || altura < 1) {
     resultado.textContent = "Escribe un carácter y una altura válida.";
@@ -25,8 +24,8 @@ function mostrar() {
   }
 
   if (figura === "triangulo") {
-    for (var i = 1; i <= altura; i++) {
-      for (var j = 1; j <= i; j++) {
+    for (let i = 1; i <= altura; i++) {
+      for (let j = 1; j <= i; j++) {
         texto += caracter;
       }
       texto += "\n";
@@ -36,8 +35,8 @@ function mostrar() {
       resultado.textContent = "Escribe una base válida.";
       return;
     }
-    for (var i = 1; i <= altura; i++) {
-      for (var j = 1; j <= base; j++) {
+    for (let i = 1; i <= altura; i++) {
+      for (let j = 1; j <= base; j++) {
         texto += caracter;
       }
       texto += "\n";

@@ -1,4 +1,5 @@
-// Práctica 2 - Figurasfunction cambiarFigura() {
+// Práctica 2 - Figuras
+function cambiarFigura() {
   var figura = document.getElementById("figura").value;
   var divBase = document.getElementById("divBase");
 

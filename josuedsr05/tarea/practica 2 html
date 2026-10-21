@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hacer figuras</title>
 </head>
 <body>
-    
-    <h1 style="color: blue;">Hacer figuras</h1>
-    <form action="">
-        <label for="figura">figura</label>
-        <input type="" id="figura"><br>
+    <form>
+        <label style="color: darkgreen;" >Hacer figuras</label>
+        <select id="Figura">
+            <option style="color: blueviolet;">Triangulo</option>
+            <option style="color: blueviolet;">Rectangulo</option>
+            </select><br>
 
-        <label for="caracter">caracter</label>
-        <input type="" id="caracter"><br>
+        <label style="color: chartreuse;" >Caracter</label>
+        <input id="Caracter" type="Text"><br>
 
-        <label for="altura">altura</label>
-        <input type="text" id="altura"><br>
+        <label style="color: blue;" >Altura</label>
+        <input id="Altura" type="text"><br>
 
-        <button id="button">mostrar</button><br>
-        <script src="practiica 2 .js"></script>
+        <button id="btnMostrar" style="color: red;">Mostrar</button><br>
+        <script src="practiica 2 .js" style="color: deeppink;"></script>
+
+    </form>
+
+</body>
+</html>

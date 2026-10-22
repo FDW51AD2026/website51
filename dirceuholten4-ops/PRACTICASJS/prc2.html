@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Dibo</title>
+</head>
+<body>
+    <h1>Dibujar Figura</h1>
+
+    <form action="">
+        <label for="opcion">Figura:</label>
+        <select name="opcion" id="opcion">
+            <option value="1">Triangulo</option>
+            <option value="2">Rectangulo</option>
+        </select>
+        <br><br>
+
+        <label for="simbolo">Caracter:</label>
+        <input type="text" name="simbolo" id="simbolo">
+        <br><br>
+
+        <label for="cantAltura">Altura:</label>
+        <input type="text" name="cantAltura" id="cantAltura">
+        <br><br>
+
+        <div id="divBase" hidden>  
+            <label for="cantBase">Base:</label>
+            <input type="text" name="cantBase" id="cantBase">
+        </div>    
+        <br><br>
+
+        <button id="btnGenerar">Mostrar</button>
+        <br><br>
+
+        <figure>
+            <pre name="resultado" id="resultado"></pre>
+        </figure>
+    </form>
+
+    <script src="prc2.js"></script>
+</body>
+</html>

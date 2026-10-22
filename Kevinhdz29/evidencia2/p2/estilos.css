@@ -1,0 +1,61 @@
+div.formulario {
+    border: 3px solid rgb(168, 146, 135);
+    width: 300px;
+    text-align: center;
+    background-color: rgb(226, 223, 223);
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+h1 {
+    border: 5px solid rgb(168, 146, 135);
+    box-sizing: border-box;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: rgb(226, 223, 223);
+}
+
+h2 {
+    text-align: center;
+    border: 5px solid rgb(168, 146, 135);
+    border-radius: 15px;
+    background-color: rgb(226, 223, 223);
+}
+
+html {
+    background-color: rgb(247, 224, 199);
+}
+
+div.resultado {
+    margin: 0 auto;
+    border: 5px solid rgb(168, 146, 135);
+    background-color: rgb(226, 223, 223);
+    border-radius: 15px;
+}
+
+div + h3 {
+    text-align: center;
+}
+
+#btnMostrar {
+    border-radius: 5px;
+    font-size: 19px;
+    width: 100%;
+    background-color: rgb(74, 74, 82);
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#btnLimpiar {
+    border-radius: 5px;
+    font-size: 19px;
+    width: 100%;
+    background-color: rgb(74, 74, 82);
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}

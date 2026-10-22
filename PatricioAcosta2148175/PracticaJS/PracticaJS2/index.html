@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica_2_ev_2</title>
+  </head>
+  <body>
+    <h1>TRIÁNGULOS Y RECTÁNGULOS</h1>
+
+    <form>
+      <label for="figura">Figura:</label>
+      <select name="figura" id="figura">
+        <option value="triangulo">Triangulo</option>
+        <option value="rectangulo">Rectangulo</option>
+      </select>
+      <br /><br />
+
+      <label for="caracter">Caracter:</label>
+      <input type="text" id="caracter" value="*" max="1" />
+      <br /><br />
+
+      <div id="contenedorBase" style="display: none">
+        <label for="base">Base:</label>
+        <input type="number" id="base" />
+        <br /><br />
+      </div>
+
+      <label for="altura">Altura:</label>
+      <input type="number" id="altura" />
+      <br /><br />
+
+      <input type="button" id="mostrar" value="Mostrar" />
+    </form>
+
+    <div
+      id="resultadoFigura"
+      style="font-family: monospace; white-space: pre; margin-top: 20px"
+    ></div>
+
+    <script src="practica2.js"></script>
+  </body>
+</html>

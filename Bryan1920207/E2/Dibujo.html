@@ -6,21 +6,44 @@
     </style>
 </head>
 <body>
-    <form>
-        <label for="Peso">Peso</label>
-        <input type="text" id="Peso"><br><br>
+    <div class="Contenedor">
+        <h1>Dibujar figuras</h1>
 
-        <label for="Altura">Altura</label>
-        <input type="text" id="Altura"><br><br>
+        <form id="FormFiguras">
 
-        <label for="IMC">IMC</label>
-        <input type="text" id="IMC" readonly><br><br>
+            <label for="Figura">Figura:</label>
+            <select id="Figura">
+                <option value="Triangulo">Triángulo</option>
+                <option value="Rectangulo">Rectángulo</option>
+            </select>
 
-        <label for="Resul">Resultado</label>
-        <input type="text" id="Resul" readonly><br><br>
+            <br><br>
 
-        <button id="btnCalcular">Calcular</button>
-    </form>
-<script src="js/E2P1.js"></script>
+            <label for="Caracter">Carácter:</label>
+            <input type="text" id="Caracter" value="*" maxlength="1" required>
+
+            <br><br>
+
+            <div id="GrupoBase" hidden>
+                <label for="Base">Base:</label>
+                <input type="number" id="Base" min="1">
+
+                <br><br>
+            </div>
+
+            <label for="Altura">Altura:</label>
+            <input type="number" id="Altura" min="1" required>
+
+            <br><br>
+
+            <button type="submit">Dibujar</button>
+
+        </form>
+
+        <h2>Resultado</h2>
+        <pre id="Dibujo"></pre>
+
+    </div>
+<script src="js/E2P2.js"></script>
 </body>
 </html>

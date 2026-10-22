@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica figuras</title>
+  <script src="practica2.js" defer></script>
+</head>
+<body>
+  <h1>Práctica figuras</h1>
+
+  <fieldset>
+    <form id="formulario">
+      <select id="figura" aria-label="Figura">
+        <option value="triangulo">Triángulo</option>
+        <option value="rectangulo">Rectángulo</option>
+      </select>
+      <br><br>
+
+      <label for="caracter">Carácter:</label>
+      <input type="text" id="caracter" value="*" maxlength="2" required>
+      <br><br>
+
+      <label for="altura">Altura:</label>
+      <input type="number" id="altura" min="1" max="50" step="1" value="3" required>
+      <br><br>
+
+      <div id="campoBase" hidden>
+        <label for="base">Base:</label>
+        <input type="number" id="base" min="1" max="50" step="1" value="5">
+        <br><br>
+      </div>
+
+      <button type="submit">Mostrar</button>
+      <button type="reset">Limpiar</button>
+    </form>
+
+    <p id="mensaje" role="alert"></p>
+    <pre id="dibujo" aria-live="polite"></pre>
+  </fieldset>
+</body>
+</html>
+
+
+
+

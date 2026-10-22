@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Dibujante</title>
+    <style>
+       body {
+        background-color: gainsboro;
+       }
+
+        form label {
+            font-size: 20px;
+            display: inline-block;
+            width: 70px;
+        }
+
+        form input {
+            font-size: 13px; 
+            border: 2px solid black;
+            width: 105px;
+        }
+
+        #btnMostrar {
+            font-size: 15px;
+            width: 150px;
+        }
+
+        select {
+            font-size: 17px;
+            border: 2px solid black; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibujar Figura</h1>
+
+    <form action="">
+        <label for="figura">Figura:</label>
+        <select name="figura" id="figura">
+            <option value="1">Triangulo</option>
+            <option value="2">Rectangulo</option>
+        </select>
+<br><br>
+        <label for="char">Caracter:</label>
+        <input type="text" name="char" id="char">
+<br><br>
+        <label for="altura">Altura:</label>
+        <input type="text" name="altura" id="altura">
+<br><br>
+    <div id="ocultBase" hidden>  
+        <label for="base">Base:</label>
+        <input type="text" name="base" id="base">
+    </div>    
+<br><br>
+        <button id="btnMostrar">Mostrar</button>
+<br><br>
+        <figure for="resul">
+            <pre name="resul" id="resul">
+
+            </pre>
+        </figure>
+    </form>
+<script src="p2.js"></script>
+</body>
+</html>

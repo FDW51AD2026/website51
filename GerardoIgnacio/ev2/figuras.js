@@ -36,5 +36,5 @@ function dibujar() {
     }
 
     
-    document.getElementById("resultado").innerText = resultado;
+    document.getElementById("resultado").textContent = resultado;
 }

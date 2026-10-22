@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacer figuras</title>
+</head>
+<body>
+    <form>
+    <label style="color: darkgreen;" >Hacer figuras</label>
+        <select id="Figura">
+            <option style="color: blueviolet;">Triangulo</option>
+            <option style="color: blueviolet;">Rectangulo</option>
+        </select><br>
+
+        <label style="color: chartreuse;" >Caracter</label>
+        <input id="Caracter" type="Text"><br>
+
+        <label style="color: blue;" >Altura</label>
+        <input id="Altura" type="text"><br>
+
+        <button id="btnMostrar" style="color: red;">Mostrar</button><br>
+        <script src="practiica 2 .js" style="color: deeppink;"></script>
+
+        <a href="https://github.com/FDW51AD2026/website51/commits/main/?since=2026-10-19&until=2026-10-21&author=josuedsr05">link del echo</a>
+        <a href="https://fdw51ad2026.github.io/website51/josuedsr05/tarea/practica 2.html">link</a>
+
+   </form>
+
+</body>
+</html>

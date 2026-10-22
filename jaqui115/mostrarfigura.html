@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras</title>
+</head>
+<body>
+    <h1>DIBUJAR FIGURA</h1>
+    <form action="">
+        <label for="figura">Figura:</label>
+        <select name="figura" id="figura">
+            <option value="1">Triangulo</option>
+            <option value="2">Rectangulo</option>
+        </select><br><br>
+
+        <label for="caracter">Caracter:</label>
+        <input type="text" name="caracter" id="caracter">
+        <br><br>
+
+        <label for="altura">Altura:</label>
+        <input type="text" name="altura" id="altura">
+        <br><br>
+
+        <label for="base">Base:</label>
+        <input type="text" name="base" id="base">
+        <br><br>
+
+        <button id="btnMostrar">Mostrar</button>
+        <br><br>
+
+        <textarea id="resultado" rows="10" cols="30" readonly
+            style="border: none; resize: none; outline: none;"></textarea>
+
+        <script src="mostrarfigura.js"></script>
+    </form>
+</body>
+</html>

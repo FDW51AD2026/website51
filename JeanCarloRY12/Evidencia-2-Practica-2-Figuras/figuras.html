@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2 - Figuras</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f8fc;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .contenedor {
+            background-color: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, button {
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #1e88c7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            white-space: pre;
+            text-align: left;
+            display: inline-block;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Práctica 2: Figuras</h1>
+
+    <div class="contenedor">
+
+        <label for="figura">Figura:</label>
+        <select id="figura" onchange="cambiarFigura()">
+            <option value="triangulo">Triángulo</option>
+            <option value="rectangulo">Rectángulo</option>
+        </select>
+
+        <label for="caracter">Carácter:</label>
+        <input type="text" id="caracter" value="*" maxlength="5">
+
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" value="3" min="1" max="30">
+
+        <div id="baseDiv" style="display: none;">
+            <label for="base">Base:</label>
+            <input type="number" id="base" value="5" min="1" max="30">
+        </div>
+
+        <br><br>
+
+        <button onclick="dibujar()">Mostrar</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function cambiarFigura() {
+            let figura = document.getElementById("figura").value;
+            let baseDiv = document.getElementById("baseDiv");
+
+            if (figura === "rectangulo") {
+                baseDiv.style.display = "block";
+            } else {
+                baseDiv.style.display = "none";
+            }
+
+            document.getElementById("resultado").textContent = "";
+        }
+
+        function dibujar() {
+            let figura = document.getElementById("figura").value;
+            let caracter = document.getElementById("caracter").value;
+            let altura = Number(document.getElementById("altura").value);
+            let base = Number(document.getElementById("base").value);
+            let resultado = "";
+
+            if (caracter.trim() === "" ||
+                !Number.isInteger(altura) || altura < 1 || altura > 30) {
+                document.getElementById("resultado").textContent =
+                    "Escribe un carácter y una altura de 1 a 30.";
+                return;
+            }
+
+            if (figura === "triangulo") {
+                for (let i = 1; i <= altura; i++) {
+                    resultado += caracter.repeat(i) + "\n";
+                }
+            } else {
+                if (!Number.isInteger(base) || base < 1 || base > 30) {
+                    document.getElementById("resultado").textContent =
+                        "Escribe una base de 1 a 30.";
+                    return;
+                }
+
+                for (let i = 1; i <= altura; i++) {
+                    resultado += caracter.repeat(base) + "\n";
+                }
+            }
+
+            document.getElementById("resultado").textContent = resultado;
+        }
+
+        dibujar();
+    </script>
+</body>
+</html>

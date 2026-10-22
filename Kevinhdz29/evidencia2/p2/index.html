@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Práctica 2</title>
+</head>
+<body>
+    <h1>App de dibujo</h1>
+    <h2>Práctica #2</h2>
+
+    <form action="">
+        <div class="formulario">
+            <label for="figura">Figura:</label>  
+            <select name="figura" id="figura">
+            <option value="triangulo">Triangulo</option>
+            <option value="rectangulo">Rectangulo</option>
+            </select>
+            <br><br>
+    
+            <div id="divBase" hidden>
+                <label for="base">Base</label>
+                <input type="text" name="base" id="base">
+                <br><br>            
+            </div>
+    
+            <label for="altura">Altura</label>
+            <input type="text" name="altura" id="altura">
+            <br><br>
+    
+            <label for="caracter">Caracter</label>
+            <input type="text" name="caracter" id="caracter" placeholder="* por defecto">
+            <br><br>
+    
+    
+            <button id="btnMostrar">Mostrar</button>
+            <button id="btnLimpiar">Limpiar</button>
+            <br><br>
+        </div>
+        <h3>Resultado:</h3>
+        <div class="resultado">
+            <pre id="resultado"></pre>
+        </div>
+    </form>
+    <script src="app.js"></script>
+
+</body>
+</html>

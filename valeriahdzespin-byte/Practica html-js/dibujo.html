@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibujar</title>
+    <title>Dibujo</title>
 </head>
 <body>
-    <h1>Operaciones</h1>
+    <h1>Dibujar Figura</h1>
     <form action="">
-        <label for="num1">Número 1:</label>
-        <input type="text" name="num1" id="num1"><br>
-
-        <label for="num2">Número 2:</label>
-        <input type="text"  name="num2" id="num2" ><br>
-
-        <label for="oper">Operaciones</label>
-        <select name="oper" id="oper">
-            <option value="1">+</option>
-            <option value="2">-</option>
-            <option value="3">*</option>
-            <option value="4">/</option>    
-        </select><br><br>
-
-        <label for="resul">Resultado:</label>
-        <input type="text" name="resul" id="resul"><br>
-        <button id="btnCalcular">Calcular</button>
+        <label for="figura">Figura:</label>
+        <select name="figura" id="figura">
+            <option value="1">Triangulo</option>
+            <option value="2">Rectangulo</option>
+        </select>
+    <br>
+        <label for="caract">Caracter:</label>
+        <input type="text" name="caract" id="caract">
+    <br>
+        <label for="altura">Altura:</label>
+        <input type="text" name="altura" id="altura">
+    <br>
+    <div id="ocultBase" hidden>  
+        <label for="base">Base:</label>
+        <input type="text" name="base" id="base">
+    </div>    
+<br>
+        <button id="btnMostrar">Mostrar</button>
+<br>
+        <figure for="resul">
+            <pre name="resul" id="resul"></pre>
+        </figure>
     </form>
+    <script src="dibujo.js"></script>
 </body>
 </html>    

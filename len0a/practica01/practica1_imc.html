@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica 1 - Cálculo del IMC</title>
+  <style>
+    body { font-family: Times New Roman, serif; margin: 20px; }
+    .caja { display: inline-block; border: 1px solid #ccc; border-radius: 4px; padding: 14px; background: #fafafa; }
+    .caja div { margin-bottom: 8px; }
+    label { display: inline-block; min-width: 70px; font-size: 14px; }
+    input[type="text"] { width: 150px; }
+    #resultado { width: 180px; }
+  </style>
+</head>
+<body>
+  <h2>Práctica 1</h2>
+  <p>Cálculo del Índice de Masa Corporal (IMC).</p>
+
+  <div class="caja">
+    <div><label for="peso">Peso (kg):</label><input type="text" id="peso"></div>
+    <div><label for="altura">Altura (m):</label><input type="text" id="altura"></div>
+    <div><label for="imc">IMC:</label><input type="text" id="imc" readonly></div>
+    <div><label for="resultado">Resultado:</label><input type="text" id="resultado" readonly></div>
+    <button type="button" id="btnCalcular">Calcular</button>
+  </div>
+
+  <script>
+    function calcularIMC() {
+      var peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
+      var altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
+
+      if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        alert("Ingresa un peso y una altura válidos (números mayores a 0).");
+        return;
+      }
+
+      // Si la altura se escribió en centímetros (ej. 170), se convierte a metros
+      if (altura > 3) { altura = altura / 100; }
+
+      var imc = peso / (altura * altura);
+      var texto;
+
+      if (imc < 18.5) {
+        texto = "Bajo Peso";
+      } else if (imc <= 25) {
+        texto = "Peso Normal";
+      } else {
+        texto = "Sin clasificación";
+      }
+
+      document.getElementById("imc").value = imc.toFixed(2);
+      document.getElementById("resultado").value = texto;
+    }
+
+    document.getElementById("btnCalcular").addEventListener("click", calcularIMC);
+  </script>
+</body>
+</html>

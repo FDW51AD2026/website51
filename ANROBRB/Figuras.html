@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dibujar Figuras</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { background: white; padding: 20px; border-radius: 8px; width: 350px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 70px; font-weight: bold; }
+        select, input { width: 180px; padding: 5px; }
+        button { padding: 8px 15px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #resultadoDibujo { margin-top: 15px; font-family: monospace; white-space: pre-wrap; font-size: 18px; line-height: 1.2; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Práctica 2: Figuras</h2>
+    
+    <div class="form-group">
+        <label for="figura">Figura:</label>
+        <select id="figura" onchange="cambiarFigura()">
+            <option value="triangulo">Triangulo</option>
+            <option value="rectangulo">Rectangulo</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="caracter">Caracter:</label>
+        <input type="text" id="caracter" value="*" maxlength="1">
+    </div>
+
+    <div class="form-group" id="grupoBase" style="display: none;">
+        <label for="base">Base:</label>
+        <input type="number" id="base" min="1" value="5">
+    </div>
+
+    <div class="form-group" id="grupoAltura">
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" min="1" value="3">
+    </div>
+
+    <button onclick="dibujarFigura()">Mostrar</button>
+
+    <div id="resultadoDibujo"></div>
+</div>
+
+<script>
+    function cambiarFigura() {
+        let tipo = document.getElementById('figura').value;
+        let grupoBase = document.getElementById('grupoBase');
+        
+        if (tipo === 'rectangulo') {
+            grupoBase.style.display = 'block';
+        } else {
+            grupoBase.style.display = 'none';
+        }
+    }
+
+    function dibujarFigura() {
+        let tipo = document.getElementById('figura').value;
+        let char = document.getElementById('caracter').value || '*';
+        let altura = parseInt(document.getElementById('altura').value);
+        let salida = "";
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Ingresa una altura valida.");
+            return;
+        }
+
+        if (tipo === 'triangulo') {
+            for (let i = 1; i <= altura; i++) {
+                salida += char.repeat(i) + "\n";
+            }
+        } else if (tipo === 'rectangulo') {
+            let base = parseInt(document.getElementById('base').value);
+            if (isNaN(base) || base <= 0) {
+                alert("Ingresa una base valida.");
+                return;
+            }
+            for (let i = 0; i < altura; i++) {
+                salida += char.repeat(base) + "\n";
+            }
+        }
+
+        document.getElementById('resultadoDibujoinnerText') = salida;
+        document.getElementById('resultadoDibujo').textContent = salida;
+    }
+</script>
+
+</body>
+</html>

@@ -25,7 +25,7 @@
     <p>Caracter <input type="text" id="caracter" value="*"></p>
     <p id="filaBase" style="display: none;">Base <input type="text" id="base"></p>
     <p>Altura <input type="text" id="altura"></p>
-    <p><button type="button">Mostrar</button></p>
+    <p><button type="button" onclick="mostrar()">Mostrar</button></p>
     <pre id="salida"></pre>
   </div>
 
@@ -39,6 +39,21 @@
       } else {
         filaBase.style.display = "none";
       }
+    }
+
+    function mostrar() {
+      var figura = document.getElementById("figura").value;
+      var caracter = document.getElementById("caracter").value;
+      var altura = parseInt(document.getElementById("altura").value);
+      var texto = "";
+
+      if (figura === "triangulo") {
+        for (var i = 1; i <= altura; i++) {
+          texto += caracter.repeat(i) + "\n";
+        }
+      }
+
+      document.getElementById("salida").textContent = texto;
     }
   </script>
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras</title>
+  <style>
+    .caja {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+    .caja p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <p>Figura:
+      <select id="figura">
+        <option value="triangulo">Triangulo</option>
+        <option value="rectangulo">Rectangulo</option>
+      </select>
+    </p>
+    <p>Caracter <input type="text" id="caracter" value="*"></p>
+    <p id="filaBase">Base <input type="text" id="base"></p>
+    <p>Altura <input type="text" id="altura"></p>
+    <p><button type="button">Mostrar</button></p>
+    <pre id="salida"></pre>
+  </div>
+</body>
+</html>

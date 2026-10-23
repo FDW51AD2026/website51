@@ -17,16 +17,29 @@
 <body>
   <div class="caja">
     <p>Figura:
-      <select id="figura">
+      <select id="figura" onchange="cambiarFigura()">
         <option value="triangulo">Triangulo</option>
         <option value="rectangulo">Rectangulo</option>
       </select>
     </p>
     <p>Caracter <input type="text" id="caracter" value="*"></p>
-    <p id="filaBase">Base <input type="text" id="base"></p>
+    <p id="filaBase" style="display: none;">Base <input type="text" id="base"></p>
     <p>Altura <input type="text" id="altura"></p>
     <p><button type="button">Mostrar</button></p>
     <pre id="salida"></pre>
   </div>
+
+  <script>
+    function cambiarFigura() {
+      var figura = document.getElementById("figura").value;
+      var filaBase = document.getElementById("filaBase");
+
+      if (figura === "rectangulo") {
+        filaBase.style.display = "block";
+      } else {
+        filaBase.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>

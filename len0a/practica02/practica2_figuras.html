@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica 2 - Triángulos y Rectángulos</title>
+  <style>
+    body { font-family: Times New Roman, serif; margin: 20px; }
+    .caja { display: inline-block; min-width: 220px; border: 1px solid #ccc; border-radius: 4px; padding: 14px; background: #fafafa; }
+    .caja div { margin-bottom: 12px; }
+    label { display: inline-block; min-width: 60px; font-size: 14px; }
+    pre { font-family: monospace; margin: 10px 0 0 30px; }
+  </style>
+</head>
+<body>
+  <h2>Práctica 2</h2>
+  <p>Aplicación que dibuja triángulos o rectángulos.</p>
+
+  <div class="caja">
+    <div>
+      <label for="figura">Figura:</label>
+      <select id="figura">
+        <option value="triangulo">Triangulo</option>
+        <option value="rectangulo">Rectangulo</option>
+      </select>
+    </div>
+    <div>
+      <label for="caracter">Caracter</label>
+      <input type="text" id="caracter" value="*" maxlength="1">
+    </div>
+    <div id="divBase" style="display:none;">
+      <label for="base">Base</label>
+      <input type="number" id="base" min="1" value="5">
+    </div>
+    <div>
+      <label for="altura">Altura</label>
+      <input type="number" id="altura" min="1" value="3">
+    </div>
+    <button type="button" id="btnMostrar">Mostrar</button>
+    <pre id="salida"></pre>
+  </div>
+
+  <script>
+    var selFigura = document.getElementById("figura");
+    var divBase = document.getElementById("divBase");
+
+    // Muestra/oculta la caja de base según la figura elegida
+    function actualizarCampos() {
+      divBase.style.display = (selFigura.value === "rectangulo") ? "block" : "none";
+      document.getElementById("salida").textContent = "";
+    }
+
+    function mostrarFigura() {
+      var figura = selFigura.value;
+      var caracter = document.getElementById("caracter").value.charAt(0);
+      var altura = parseInt(document.getElementById("altura").value, 10);
+      var salida = "";
+
+      if (caracter === "") { alert("Ingresa un carácter."); return; }
+      if (isNaN(altura) || altura < 1) { alert("Ingresa una altura válida (entero mayor a 0)."); return; }
+
+      if (figura === "triangulo") {
+        for (var i = 1; i <= altura; i++) {
+          salida += caracter.repeat(i) + "\n";
+        }
+      } else {
+        var base = parseInt(document.getElementById("base").value, 10);
+        if (isNaN(base) || base < 1) { alert("Ingresa una base válida (entero mayor a 0)."); return; }
+        for (var j = 0; j < altura; j++) {
+          salida += caracter.repeat(base) + "\n";
+        }
+      }
+      document.getElementById("salida").textContent = salida;
+    }
+
+    selFigura.addEventListener("change", actualizarCampos);
+    document.getElementById("btnMostrar").addEventListener("click", mostrarFigura);
+    actualizarCampos();
+  </script>
+</body>
+</html>

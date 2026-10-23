@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #000;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        p.instrucciones {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Contenedor principal estilo tarjeta */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            width: 250px;
+            background-color: #fcfcfc;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 4px 6px;
+            box-sizing: border-box;
+            border: 1px solid #767676;
+            border-radius: 2px;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 3px 10px;
+            cursor: pointer;
+            border: 1px solid #767676;
+            background-color: #efefef;
+            border-radius: 2px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Área de dibujo con fuente monospace */
+        #resultado {
+            margin-top: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre;
+            line-height: 1.2;
+            font-size: 15px;
+        }
+
+        .pie-pagina {
+            margin-top: 25px;
+            font-size: 14px;
+            max-width: 900px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Caja/Contenedor Principal -->
+    <div class="card">
+        <div class="form-group">
+            <label for="figura">Figura:</label>
+            <select id="figura" onchange="cambiarFigura()">
+                <option value="triangulo">Triangulo</option>
+                <option value="rectangulo">Rectangulo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="caracter">Caracter</label>
+            <input type="text" id="caracter" value="*" maxlength="5">
+        </div>
+
+        <!-- Campo Base (oculto inicialmente) -->
+        <div class="form-group" id="grupo-base" style="display: none;">
+            <label for="base">Base</label>
+            <input type="number" id="base" min="1" value="5">
+        </div>
+
+        <!-- Campo Altura -->
+        <div class="form-group" id="grupo-altura">
+            <label for="altura">Altura</label>
+            <input type="number" id="altura" min="1" value="3">
+        </div>
+
+        <button type="button" onclick="dibujarFigura()">Mostrar</button>
+
+        <!-- Salida gráfica de la figura -->
+        <div id="resultado"></div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+</html>

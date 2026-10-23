@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dibujar figuras</title>
+</head>
+<body>
+  <h1>Dibujar figuras</h1>
+
+  <label>Figura</label><br>
+  <select id="figura">
+    <option value="triangulo">Triángulo</option>
+    <option value="rectangulo">Rectángulo</option>
+  </select><br><br>
+
+  <label>Carácter</label><br>
+  <input type="text" id="caracter" maxlength="1"><br><br>
+
+  <div id="divBase" style="display: none;">
+    <label>Base</label><br>
+    <input type="text" id="base"><br><br>
+  </div>
+
+  <label>Altura</label><br>
+  <input type="text" id="altura"><br><br>
+
+  <button id="btnDibujar">Dibujar</button>
+
+  <pre id="resultado"></pre>
+
+  <script src="figuras.js"></script>
+</body>
+</html>

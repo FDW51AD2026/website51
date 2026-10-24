@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras</title>
+  <style>
+    .caja {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+    .caja p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <p>Figura:
+      <select id="figura" onchange="cambiarFigura()">
+        <option value="triangulo">Triangulo</option>
+        <option value="rectangulo">Rectangulo</option>
+      </select>
+    </p>
+    <p>Caracter <input type="text" id="caracter" value="*"></p>
+    <p id="filaBase" style="display: none;">Base <input type="text" id="base"></p>
+    <p>Altura <input type="text" id="altura"></p>
+    <p><button type="button" onclick="mostrar()">Mostrar</button></p>
+    <pre id="salida"></pre>
+  </div>
+
+  <script>
+    function cambiarFigura() {
+      var figura = document.getElementById("figura").value;
+      var filaBase = document.getElementById("filaBase");
+
+      if (figura === "rectangulo") {
+        filaBase.style.display = "block";
+      } else {
+        filaBase.style.display = "none";
+      }
+    }
+
+    function mostrar() {
+      var figura = document.getElementById("figura").value;
+      var caracter = document.getElementById("caracter").value;
+      var base = parseInt(document.getElementById("base").value);
+      var altura = parseInt(document.getElementById("altura").value);
+      var texto = "";
+
+      if (caracter === "" || isNaN(altura) || altura <= 0 ||
+          (figura === "rectangulo" && (isNaN(base) || base <= 0))) {
+        document.getElementById("salida").textContent = "Datos inválidos";
+        return;
+      }
+
+      if (figura === "triangulo") {
+        for (var i = 1; i <= altura; i++) {
+          texto += caracter.repeat(i) + "\n";
+        }
+      } else {
+        for (var j = 1; j <= altura; j++) {
+          texto += caracter.repeat(base) + "\n";
+        }
+      }
+
+      document.getElementById("salida").textContent = texto;
+    }
+  </script>
+</body>
+</html>

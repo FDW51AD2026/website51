@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibuja Figuras</title>
+</head>
+<body>
+
+    <h1>Dibuja un Triangulo o Rectangulo</h1>
+    
+    <!-- Le quitamos el action="" al form -->
+    <form>
+        <label for="fig">Figura:</label>
+        <select name="fig" id="fig">
+            <option value="1">Triangulo </option>
+            <option value="2">Rectangulo</option>
+        </select><br><br>
+        
+        <label for="car">Caracter:</label>
+        <input type="text" name="car" id="car" maxlength="1" value="*"><br><br>
+
+        <label for="alt">Altura:</label>
+        <input type="number" name="alt" id="alt" value="3"><br><br>
+        
+        <div id="contenedorBase">
+            <label for="base">Base:</label>
+            <input type="number" name="base" id="base" value="4"><br><br>
+        </div>
+
+        <!-- AQUÍ ESTÁ LA MAGIA: type="button" evita que el formulario se envíe -->
+        <button type="button" id="btnMostrar">Mostrar</button><br><br>
+    </form>
+
+    <pre id="figcar"></pre>
+
+    <script src="app.js"></script>
+</body>
+</html>

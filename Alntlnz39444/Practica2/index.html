@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 2 Ev2 - Figuras</title>
+</head>
+<body>
+    <h1>Dibujar Figuras</h1>
+
+    <form action="">
+        <label for="figura">Figura:</label>
+        <select name="figura" id="figura">
+            <option value="triangulo">Triángulo</option>
+            <option value="rectangulo">Rectángulo</option>
+        </select><br><br>
+
+        <label for="caracter">Carácter:</label>
+        <input type="text" name="caracter" id="caracter"><br><br>
+
+        <label for="base" id="lblBase" hidden>Base:</label>
+        <input type="text" name="base" id="base" hidden><br id="brBase" hidden><br id="brBase2" hidden>
+
+        <label for="altura">Altura:</label>
+        <input type="text" name="altura" id="altura"><br><br>
+
+        <button id="btnMostrar">Mostrar</button><br><br>
+        <pre id="resultado"></pre>
+
+        <script src="app.js"></script>
+    </form>
+
+</body>
+</html>
